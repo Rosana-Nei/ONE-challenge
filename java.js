@@ -7,14 +7,11 @@ document.querySelector('.texto-usuario').addEventListener('input', function() {
     }  
     this.value = this.value.toLowerCase();
     this.value = this.value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-
-     if (noEsValido) {
-      var exclamacion = document.getElementById("exclamacion");
-      exclamacion.classList.add('animation-show');
-      setTimeout(function() {
-        exclamacion.classList.remove('animation-show');
-      }, 2000);
-    }
+    var exclamacion = document.getElementById("exclamacion");
+    exclamacion.classList.add('animation-show');
+    setTimeout(function() {
+      exclamacion.classList.remove('animation-show');
+    }, 2000);    
   });
 
 
