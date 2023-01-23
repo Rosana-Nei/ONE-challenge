@@ -13,11 +13,7 @@ document.querySelector('.texto-usuario').addEventListener('input', function() {
       exclamacion.classList.remove('animation-show');
     }, 2000);    
   });
-
-
-  const removeAccents = (str) => {
-    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-  }   
+  
 
 let carga = document.getElementById("texto-usuario");//textarea
 let descarga = document.getElementById("parrafo-a-copiar")//textarea
@@ -45,7 +41,6 @@ const dictioB = { "ai" :"a", "enter" : "e", "imes" : "i", "ober" :"o", "ufat" : 
         return dictioB[coincidencia];
     })
     carga.value = str
-    // descarga.value = "";
   });
 
 
@@ -58,9 +53,6 @@ var botonCopiar = document.querySelector(".boton-copiar");
     encriptado.add("no-mostrar");
     imagen.remove("no-mostrar");
   });
-
-
-
 
 
 let area = document.getElementsByClassName("text-area")
