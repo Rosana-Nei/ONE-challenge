@@ -126,10 +126,10 @@ main{
 }
 
 .animation-show{
-    animation: oscilate 0.3s ease-in-out infinite, grow 1s ease-in-out;
-    animation-delay: 0s, 0s;
+    animation: oscilate-red 1s ease-in-out infinite, oscilate .3s ease-in-out infinite;
+    animation-delay: 0s, 1s;
 }  
-  @keyframes grow {
+  /* @keyframes grow {
     0% {
       transform: scale(1);
     }
@@ -140,9 +140,29 @@ main{
     50% {
       transform: scale(1);
     }
-}
+} */
 
-@keyframes oscilate {
+@keyframes oscilate-red{
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(0deg);
+      transform: scale(4);
+      color: red;
+    }
+    75% {
+      transform: rotate(-15deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes oscilate{
     0% {
       transform: rotate(0deg);
     }
